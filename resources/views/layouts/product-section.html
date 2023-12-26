@@ -1,0 +1,19 @@
+<div class="container product mb-5" ng-controller="fillProducts">
+    <div class="display-5 fw-normal ps-5 mb-5 tilte-section">NEW
+        <span class="d-block">COLLECTION</span>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 text-start" ng-repeat="product in products">
+            <a href="product-detail.html" class="product-items d-block color-deep mb-5">
+                <div class="bg-white-cover h-100 mb-3">
+                    <img src="resources/img/{{ product.image }}" alt="" class="img-fluid img-section">
+                </div>
+                <div class="product-items-info"> {{ product.name }}
+                </div>
+                <strong class="product-items-price fs-3">
+                    {{ product.price }}
+                </strong>
+            </a>
+        </div>
+    </div>
+</div>

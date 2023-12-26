@@ -1,0 +1,154 @@
+<div class="screen bg-white">
+    <div class="back-step text-center" ng-show="back">
+        <div class="row bg-alysum">
+            <div class="col-1 border-end" ng-click="backStep('{{ step }}')"><i class="bi bi-arrow-left fs-1"></i></div>
+            <div class="col-11"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 p-5 form-register">
+            <div class="tille-form mt-5">
+                <h1 class="fw-bolder display-4 mb-5 border-bottom pb-3">CREATE A NEW ACCOUNT</h1>
+                <h2 class="fw-bolder mb-5 ">LOGIN INFORMATION (<span>{{ step }}</span>/3)</h2>
+            </div>
+            <!-- STEP 1 -->
+            <div class="body-register-1" ng-show="step1">
+                <form>
+                    <div class="bg-white p-5 mb-5">
+                        <div class="form-outline mb-5">
+                            <label class="form-label" for="email">EMAIL <span class="color-deep">*</span></label>
+                            <input type="email" id="email" class="form-control rounded-0"
+                                placeholder="name@example.com" />
+                        </div>
+                        <div class="form-outline mb-5">
+                            <label class="form-label" for="confirm-email">COMFIRMATION <span
+                                    class="color-deep">*</span></label>
+                            <input type="email" id="confirm-email" class="form-control rounded-0"
+                                placeholder="name@example.com" />
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="btn-deep w-25 text-center fs-4 lh-lg rounded-0 mb-5"
+                            ng-click="isShowHide('next-step-1')">NEXT</button>
+                    </div>
+                </form>
+            </div>
+            <!-- STEP 2 -->
+            <div class="body-register-2" ng-show="step2">
+                <div class="input-email bg-white p-5 mb-5">
+                    <div class="form-outline mb-5">
+                        <label class="form-label" for="password">PASSWORD <span class="color-deep">*</span></label>
+                        <input type="password" id="password" class="form-control rounded-0" />
+                    </div>
+                </div>
+                <div class="tille-form mt-5">
+                    <h2 class="fw-bolder mb-5 ">PERSONAL INFORMATION</h2>
+                </div>
+                <div class="input-personal bg-white p-5 mb-5">
+                    <div class="mb-5">
+                        <label class="form-label" for="tilte">TILTE <span class="color-deep">*</span></label>
+                        <select class="form-select fs-4 lh-lg py-3 rounded-0" id="tilte"
+                            aria-label="Default select example">
+                            <option selected>Select your tilte</option>
+                            <option value="1">Mr</option>
+                            <option value="2">Mrs</option>
+                            <option value="3">Ms</option>
+                            <option value="4">Mx</option>
+                            <option value="5">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="form-outline mb-5">
+                        <label class="form-label" for="fisrt-name">FIRST NAME <span class="color-deep">*</span></label>
+                        <input type="text" id="fisrt-name" class="form-control rounded-0" />
+                    </div>
+                    <div class="form-outline mb-5">
+                        <label class="form-label" for="last-name">LAST NAME <span class="color-deep">*</span></label>
+                        <input type="text" id="last-name" class="form-control rounded-0" />
+                    </div>
+                    <div class="mb-5">
+                        <label class="form-label" for="country-region">COUNTRY/REGION <span
+                                class="color-deep">*</span></label>
+                        <select class="form-select fs-4 lh-lg py-3 rounded-0" id="country-region"
+                            aria-label="Default select example">
+                            <option selected>PLEASE SELECT YOUR COUNTRY / REGION</option>
+                            <option value="1">VIETNAM</option>
+                            <option value="2">US</option>
+                            <option value="3">GERMANY</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="check-privacy bg-white p-5 fs-4 color-london mb-5">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Subscribe to receive Louis Vuitton
+                            emails. By subscribing you agree to our <a href="#" class="color-deep"> Privacy
+                                Policy.</a></label>
+                    </div>
+                </div>
+                <div class="text-end  border-bottom">
+                    <button type="button" class="btn-deep w-25 text-center fs-4 lh-lg rounded-0 mb-5"
+                        ng-click="isShowHide('next-step-2')">NEXT</button>
+                </div>
+                <div class="receive mt-5 fs-5">
+                    <p class="color-london mb-5">
+                        You will receive an activation code by email to validate your account creation
+                    </p>
+                    <p class="color-london mb-5">
+                        Your personal data is processed by Your personal data is processed by Gecho
+                        Malletier to manage and enhance your customer experience, for statistics and surveys, and if
+                        you consent, to provide you with information on Gecho products, services and events.
+                        Our communications may be personalized according to your client profile and areas of
+                        interest, unless you object to such personalization. You have a right to access, rectify,
+                        erase, restrict or object to the processing of your data. You can also request a copy of
+                        your data to exercise your right to data portability. All these rights can be exercised at
+                        any time by sending your request to our Data Protection Officer at:
+                        personaldata@gecho.com.
+                    </p>
+                </div>
+            </div>
+            <!-- STEP 3 -->
+            <div class="body-register-3" ng-show="step3">
+                <div class="tille-form mt-5">
+                    <h2 class="fw-bolder mb-5 ">ACCOUNT ACTIVATION</h2>
+                </div>
+                <div class="verify-code bg-white p-5 mb-5">
+                    <p class="fs-4 color-london mb-5">
+                        Please enter the activation code you just received by email at taichet2003@gmail.com to
+                        activate your account
+                    </p>
+                    <div class="form-outline mb-5">
+                        <label class="form-label" for="activate-code">ACTIVATION CODE <span
+                                class="color-deep">*</span></label>
+                        <input type="text" id="activate-code" class="form-control rounded-0" placeholder="ex: 12345" />
+                    </div>
+                    <span class="fw-medium fs-4">
+                        <a href="#" class="color-deep">Send again?</a>
+                    </span>
+                </div>
+                <div class="text-end  border-bottom">
+                    <button type="button" class="btn-deep w-25 text-center fs-4 lh-lg rounded-0 mb-5">Active
+                        account</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 bg-white">
+            <div class="p-5">
+                <div class="tille-form mt-5">
+                    <p class="fs-4 fw-bold mb-3 border-bottom pb-3">CLIENT SERVICES</p>
+                    <p class="fs-4 mb-5 color-london"><i class="bi bi-mailbox me-4"></i><a href="#"
+                            class="text-decoration-none color-london">Email Us</a></p>
+                </div>
+                <div class="body-manager-mail bg-alysum text-start mb-5 p-5">
+                    <h3 class="fw-bolder mb-5">WHAT YOU'LL FIND IN YOUR LV ACCOUNT</h3>
+                    <p class="fs-4 mb-3 border-bottom color-deep pb-3 lh-lg"><i class="bi bi-wallet me-4"></i></i>Manage
+                        your personal information</p>
+                    <p class="fs-4 mb-3 border-bottom color-deep pb-3 lh-lg"><i
+                            class="bi bi-envelope me-4"></i></i>Receive Louis Vuitton's digital communications</p>
+                    <p class="fs-4 color-deep lh-lg"><i class="bi bi-heart me-4"></i></i>Register
+                        your wishlist</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

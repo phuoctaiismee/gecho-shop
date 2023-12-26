@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GECHO - Shopping for you babi</title>
+    <link rel="stylesheet" href="resources/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="vendors/node_modules/angular/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="resources/angular/app/app.js"></script>
+</head>
+
+<body>
+
+    <div ng-include="'resources/views/layouts/header.html'"></div>
+    <div class="container">      
+        <ng-view></ng-view>
+    </div>
+    <div ng-include="'resources/views/layouts/footer.html'"></div>
+
+
+    <script src="vendors/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add js carousel -->
+    <script src="resources/js/carousel.js"></script>
+    <script src="resources/angular/app/services/products.js"></script>
+    <!-- Add js showhide Forgot password -->
+    <script src="resources/angular/app/views/forgot.js"></script>
+    <!-- Add js Load subjects -->
+    <script src="resources/angular/app/services/quiz-subjects.js"></script>
+    <!-- Add js Load students -->
+    <script src="resources/angular/app/services/students.js"></script>
+    <!-- Add js NextStep Register -->
+    <script src="resources/angular/app/views/register.js"></script>
+</body>
+
+</html>

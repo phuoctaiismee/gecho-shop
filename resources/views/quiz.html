@@ -1,0 +1,124 @@
+<div class="container">
+    <div class="container mb-5">
+        <div class="category">
+            <div class="tilte-category text-center mb-5">
+                <h2 class="display-6 fw-bold text-uppercase mb-5">programming language</h2>
+                <p class="fs-4 color-london mb-5">Choose from the list of top-selling packages tailored for you. We care
+                    your
+                    heath</p>
+                <form class="d-flex m-0 m-auto w-50 mb-5 search-bar" role="search">
+                    <input class="form-control rounded-end-0 rounded-start-pill fs-4 lh-lg py-3" type="search"
+                        placeholder="Search for name or packages programming language" aria-label="Search">
+                    <button class="btn-viva w-25 fs-3 rounded-start-0 rounded-end-pill" type="submit"><i
+                            class="bi bi-search me-4"></i>Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5">
+        <div class="packages">
+            <div class="text-center mb-3">
+                <p class="display-6 fw-semibold pb-3">
+                    Popular Test
+                    <span class="d-block fs-5 fw-light color-london my-3">The best courser test in website!</span>
+                </p>
+            </div>
+            <div class="row text-center w-50 mx-auto">
+                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                    <div class="rounded-pill packages-box-icons packages-box-icons--1">
+                        <i class="bi bi-code-slash"></i>
+                        <span class="packages-text text-center fw-semibold fs-5 mt-4">
+                            HTML
+                        </span>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                    <div class="rounded-pill packages-box-icons packages-box-icons--2">
+                        <i class="bi bi-controller"></i>
+                        <span class="packages-text text-center fw-semibold fs-5 mt-4">
+                            Game
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                    <div class="rounded-pill packages-box-icons packages-box-icons--3">
+                        <i class=" bi bi-cloud"></i>
+                        <span class="packages-text text-center fw-semibold fs-5 mt-4">
+                            Cloud
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-white p-5">
+        <div class="d-flex justify-content-center mb-5">
+            <p class="tilte-section-bottom display-6 fw-semibold pb-2">
+                Best Packages
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center" ng-repeat="subject in subjects|limitTo:8:begin">
+                <div class="product-items color-deep position-relative" ng-click="getId(subject.id)">
+                    <div class="border p-3 rounded-3">
+                        <div class="h-100 mb-3">
+                            <img src="../../resources/img/logos/{{ subject.Logo }}" alt="" class="img-fluid">
+                        </div>
+                        <div class="product-items-info"> {{ subject.Name }}
+                        </div>
+                        <strong class="product-items-price fs-3">
+                            {{ subject.id }}
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panigate mt-5 d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" ng-click="first()">1</a></li>
+                    <li class="page-item"><a class="page-link" ng-click="last()">2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container col-9 my-5">
+        <div class="text-center">
+            <h2 class="fs-1 pb-2">Quizy</h2>
+        </div>
+        <div class="quiz  bg-white p-5 rounded-4">
+            <div class="quiz-header d-flex justify-content-between">
+                <div class="quiz-header-title fs-1 fw-bold mb-3">
+                    Quiz
+                </div>
+                <div class="quiz-header-time fs-3">
+                    <span class="text-success fs-1">
+                        {{counter | secondsToDateTime | date:'mm:ss'}}
+                    </span>
+                </div>
+            </div>
+            <div class="quiz-body" ng-repeat="quiz in quizs|limitTo:1:begin">
+                <div class="quiz-body-question fs-2 mb-3">
+                    {{ quiz.Text }}
+                </div>
+                <div class="quiz-body-answers fs-4">
+                    <div class="row">
+                        <div class="col-md-6" ng-repeat="answer in quiz.Answers">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="{{ quiz.id }}" id="{{ answer.id }}">
+                                <label class="form-check-label" for="{{ answer.id }}">
+                                    {{ answer.Text }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-control d-flex justify-content-between mt-3">
+                <button class="btn-outline-viva fs-3 rounded-pill px-4 py-2" ng-click="prev()">Prev</button>
+                <button class="btn bg-viva text-white fs-3 rounded-pill px-4 py-2"  ng-click="next()">Prev</button>
+            </div>
+        </div>
+    </div>
+</div>

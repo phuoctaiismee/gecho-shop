@@ -1,0 +1,136 @@
+<div class="container col-8 bg-white my-5">
+    <div class="text-center py-5 fs-3 fw-bold">
+        STUDENT INFOMATION
+    </div>
+    <form class="px-5" name="addStudentForm" ng-controller="saveStudents" ng-submit="saveData()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="username" class="form-label fw-semibold">Username</label>
+                    <input type="text" class="form-control" name="inputUserName" id="username"
+                        ng-model="student.username" placeholder="Enter your username" required>
+                </div>
+                <span class="text-viva fs-4"
+                    ng-show="addStudentForm.inputUserName.$error.required && addStudentForm.inputUserName.$touched"><i
+                        class="bi bi-exclamation-diamond me-2"></i>Email is required.</span>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="password" class="form-label fw-semibold">Password</label>
+                    <input type="password" class="form-control" name="inputPassword" id="password"
+                        ng-model="student.password" placeholder="Enter your password" required minlength="5"
+                        maxlength="20">
+                    <span class="text-viva fs-4"
+                        ng-show="addStudentForm.inputPassword.$error.required && addStudentForm.inputPassword.$touched"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Password is required.</span>
+                    <!-- <span class="text-viva fs-4" ng-show="addStudentForm.inputPassword.$invalid"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Password is invalid.</span> -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="fullname" class="form-label fw-semibold">Fullname</label>
+                    <input type="text" class="form-control" name="inputFullname" id="fullname"
+                        ng-model="student.fullname" placeholder="Enter your fullname" required>
+                    <span class="text-viva fs-4"
+                        ng-show="addStudentForm.inputFullname.$error.required && addStudentForm.inputFullname.$touched"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Fullname is required.</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="emailIp" class="form-label fw-semibold">Email</label>
+                    <input type="email" class="form-control" name="inputEmail" id="emailIp" ng-model="student.email"
+                        placeholder="Enter your email" required>
+                    <span class="text-viva fs-4"
+                        ng-show="addStudentForm.inputEmail.$error.required && addStudentForm.inputEmail.$touched"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Email is required.</span>
+                    <span class="text-viva fs-4"
+                        ng-show="addStudentForm.inputEmail.$error.email"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Email is invalid.</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3 fs-4">
+                    <label class="form-label fw-semibold">Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" ng-model="student.gender"
+                            id="genderNam" checked>
+                        <label class="form-check-label" for="genderNam">
+                            Nam
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" ng-model="student.gender"
+                            id="genderNu">
+                        <label class="form-check-label" for="genderNu">
+                            Nữ
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="birthday" class="form-label fw-semibold">Birthday</label>
+                    <input type="date" class="form-control" name="inputBirth" id="birthday" ng-model="student.birthday"
+                        placeholder="Enter your birthday" required>
+                        <span class="text-viva fs-4"
+                        ng-show="addStudentForm.inputBirth.$error.required && addStudentForm.inputBirth.$touched"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Birthday is required.</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="schoolfee" class="form-label fw-semibold">Schoolfee</label>
+                    <input type="number" class="form-control" name="inputSchool" id="schoolfee" ng-model="student.schoolfee"
+                        placeholder="Enter your schoolfee" required>
+                        <span class="text-viva fs-4"
+                        ng-show="addStudentForm.inputSchool.$error.required && addStudentForm.inputSchool.$touched"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Schoolfee is required.</span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="mark" class="form-label fw-semibold">Mark</label>
+                    <input type="number" class="form-control" name="inputMark" id="mark" ng-model="student.mark"
+                        placeholder="Enter your mark" required>
+                        <span class="text-viva fs-4"
+                        ng-show="addStudentForm.inputMark.$error.required && addStudentForm.inputMark.$touched"><i
+                            class="bi bi-exclamation-diamond me-2"></i>Mark is required.</span>
+                </div>
+            </div>
+        </div>
+        <button ng-disabled="addStudentForm.$invalid" type="submit" class="btn btn-viva fs-4 my-5">Thêm</button>
+    </form>
+</div>
+<div class="container col-8">
+    <div class="table-responsive">
+        <table class="table table-striped fs-4">
+            <thead>
+                <tr>
+                    <th scope="col">Fullname</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Birthday</th>
+                    <th scope="col">Schoolfee</th>
+                    <th scope="col">Mark</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in students">
+                    <td>{{ student.fullname }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.gender == "true" ? 'Nam' : 'Nữ' }}</td>
+                    <td>{{ student.birthday | date:'yyyy-MM-dd'}}</td>
+                    <td>{{ student.schoolfee }}</td>
+                    <td>{{ student.marks }}</td>
+                    <td class="text-center">
+                        <a href="#!edit-student/{{student.id}}" class="btn btn-outline-primary fs-4">Sửa</a>
+                        <a ng-click="delData(student.id)" class="btn btn-outline-danger fs-4">Xóa</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

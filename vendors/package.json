@@ -1,0 +1,17 @@
+{
+  "name": "tainppc03405_it17302_assignment_2",
+  "version": "1.0.0",
+  "description": "TAINPPC03405_IT17302",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "PhuocTai",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "bootstrap": "^5.3.0-alpha1"
+  },
+  "devDependencies": {}
+}

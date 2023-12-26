@@ -1,0 +1,89 @@
+#my-account {
+    --bs-offcanvas-width: 45vw;
+}
+
+.tilte-section {
+    border-left: .5rem solid $viva-magenta;
+    height: fit-content;
+}
+
+.tilte-section-bottom {
+    border-bottom: .4rem solid $viva-magenta;
+    width: fit-content;
+}
+
+.bg-alysum {
+    background-color: $white-alysum !important;
+}
+
+.bg-white-cover {
+    background-color: $white-cover !important;
+}
+
+.bg-viva {
+    background-color: $viva-magenta !important;
+}
+
+.btn-viva {
+    border-radius: .5rem;
+    padding: .6rem .7rem;
+    border: none;
+    background-color: $viva-magenta !important;
+    color: $white-alysum !important;
+}
+
+.btn-viva:hover,
+.btn-viva:active {
+    color: $white !important;
+    background-color: #942942 !important;
+}
+
+
+.btn-outline-viva {
+    border-radius: .5rem;
+    padding: .6rem .7rem;
+    border: .1rem solid $viva-magenta !important;
+    color: $viva-magenta !important;
+}
+
+.btn-outline-viva:hover,
+.btn-outline-viva:active {
+    background-color: $viva-magenta !important;
+    color: $white-alysum !important;
+}
+
+.btn-deep {
+    border-radius: .5rem;
+    padding: .6rem 1rem;
+    background-color: $deep-depths !important;
+    border: .1rem solid $deep-depths !important;
+    color: $white-alysum !important;
+}
+
+.btn-deep:hover,
+.btn-deep:active {
+    background-color: $white-alysum !important;
+    color: $deep-depths !important;
+}
+
+.color-deep {
+    color: $deep-depths !important;
+}
+
+.color-london {
+    color: $london-fog !important;
+}
+
+.text-viva {
+    color: $viva-magenta !important;
+}
+
+.card-footer {
+    border: none;
+}
+
+.card {
+    cursor: pointer;
+}
+
+$primary : #BB2649 !default;

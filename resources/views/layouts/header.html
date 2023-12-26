@@ -1,0 +1,158 @@
+<div class="site-navigation mb-5">
+    <div class="container border-bottom">
+        <div class="d-flex align-items-center justify-content-between my-4">
+            <div class="logo">
+                <div class="site-logo">
+                    <a href="index.html" class="fw-bolder display-5 color-deep text-decoration-none">GECHO</a>
+                </div>
+            </div>
+            <div class="main-nav d-none d-lg-block">
+                <ul class="nav justify-content-center text-uppercase fw-normal">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expan
+                            bg-white-coverded="false">
+                            home
+                        </a>
+                        <ul class="dropdown-menu border-0 rounded-0 bg-alysum">
+                            <li><a class="dropdown-item" href="#testimonial">feed back</a></li>
+                            <li><a class="dropdown-item" href="#!faq">Q & A</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#collection">collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutus">about us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!quiz">quiz</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="icons position-relative" ng-controller="showhideForgotPass">
+                <a href="#" class="icons-btn d-inline-block"><i class="bi bi-search"></i></a>
+                <a href="#!infomation" class="icons-btn d-none d-md-inline-block"><i class="bi bi-person-circle"></i></span></a>
+                <a href="#!cart-shopping" class="icons-btn d-inline-block bag">
+                    <i class="bi bi-basket3-fill"></i>
+                    <span class="number">2</span>
+                </a>
+                <!-- Show form login with Offcanvas -->
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#callFormLogin"
+                    aria-controls="callFormLogin">
+                    <a class="icons-btn d-inline-block">MYGe</span></a>
+                </button>
+                <!-- Offcanvas Body -->
+                <div class="offcanvas offcanvas-end" style="width: 550px; padding: 0 5rem;" data-bs-backdrop="static"
+                    tabindex="-1" id="callFormLogin" aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header py-4 border-bottom">
+                        <h1 class="offcanvas-title" id="staticBackdropLabel">IDENTIFICATION</h1>
+                        <button type="button" class="btn-close fs-3 me-3" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <!-- Component Login Form -->
+                        <div class="login-form border-bottom pb-5" ng-show="showlg">
+                            <div class="tille-form mt-5">
+                                <h3 class="fw-medium mb-5">I ALREADY HAVE AN ACCOUNT!</h3>
+                            </div>
+                            <form name="loginForm">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="email">Email address <span
+                                            class="text-viva">*</span></label>
+                                    <input type="email" id="email" name="emailInput" ng-model="email" required
+                                        class="form-control rounded-0" />
+                                    <span class="text-viva fs-4"
+                                        ng-show="loginForm.emailInput.$error.required && loginForm.emailInput.$touched"><i
+                                            class="bi bi-exclamation-diamond me-2"></i>Email is required.</span>
+                                    <span class="text-viva fs-4" ng-show="loginForm.emailInput.$error.email"><i
+                                            class="bi bi-exclamation-diamond me-2"></i>Please enter valid your
+                                        email!</span>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="pass">Password <span
+                                            class="text-viva">*</span></label>
+                                    <input type="password" id="pass" name="passInput" ng-model="pass" maxlength="25"
+                                        required class="form-control rounded-0" />
+                                    <span class="text-viva fs-4"
+                                        ng-show="loginForm.passInput.$error.required && loginForm.passInput.$touched"><i
+                                            class="bi bi-exclamation-diamond me-2"></i>Password is required.</span>
+                                    <span class="text-viva fs-4" ng-show="loginForm.passInput.$error.password"><i
+                                            class="bi bi-exclamation-diamond me-2"></i>Please enter valid your
+                                        email!</span>
+                                </div>
+                                <a type="button" class="fs-4 color-deep" ng-click="isShowHide('show')">Forgot
+                                    password?</a>
+                                <button type="submit"
+                                    class="btn bg-viva text-white w-100 fs-3 lh-lg rounded-0 mt-5">Sign
+                                    in</button>
+                            </form>
+                        </div>
+                        <!-- Component Forgot Form -->
+                        <div class="forgot-password border-bottom pb-5" ng-show="showfg">
+                            <div class="tille-form mt-5">
+                                <h3 class="fw-medium mb-5">FORGOT YOUR PASSWORD</h3>
+                                <p class="fs-4 color-london mb-5">Please enter your email address to reset your
+                                    password. You will receive an email shortly.</p>
+                            </div>
+                            <div class="body-forgot">
+                                <form name="mailForgot">
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="email-forgot">Email address <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" id="email-forgot" name="forgotMail" required ng-model="emailforgot" class="form-control rounded-0" />
+                                        <span class="text-viva fs-4"
+                                            ng-show="mailForgot.forgotMail.$error.required && mailForgot.forgotMail.$touched"><i
+                                                class="bi bi-exclamation-diamond me-2"></i>Email is required.</span>
+                                        <span class="text-viva fs-4" ng-show="mailForgot.forgotMail.$error.email"><i
+                                                class="bi bi-exclamation-diamond me-2"></i>Please enter valid your
+                                            email!</span>
+                                    </div>
+                                    <div class="d-flex g-3 justify-content-between">
+                                        <a type="button"
+                                            class="btn btn-outline-viva w-100 lh-lg rounded-0 fs-4 me-3"
+                                            ng-click="isShowHide('hide')">CANCEL</a>
+                                        <a href="#" class="btn bg-viva text-white w-100 lh-lg rounded-0 fs-4 ms-3">SEND</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Component Create Account Form -->
+                        <div class="create-account">
+                            <div class="tille-form mt-5">
+                                <h3 class="fw-medium mb-5">I DON'T HAVE AN ACCOUNT</h3>
+                                <p class="fs-4 color-london mb-5">Enjoy added benefits and a richer experience by
+                                    creating a personal account</p>
+                            </div>
+                            <a href="#!register" class="btn btn-outline-viva w-100 lh-lg rounded-0 fs-4">Create
+                                MYGe
+                                Account</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="d-inline-block d-lg-none border-0 icon-menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#nav-mobile" aria-controls="nav-mobile"><i class="icons-btn bi bi-list"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="nav-mobile" aria-labelledby="nav-mobile-header">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="nav-mobile-header">GECHO</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="list-group list-group-flush text-uppercase">
+                            <a href="index.html" class="list-group-item list-group-item-action border-0">Home</a>
+                            <a href="#collection"
+                                class="list-group-item list-group-item-action border-0">collections</a>
+                            <a href="#aboutus" class="list-group-item list-group-item-action">about us</a>
+                            <a href="#contact" class="list-group-item list-group-item-action border-0">Contact</a>
+                            <a href="#!quiz" class="list-group-item list-group-item-action border-0">Quiz</a>
+                            <a href="#testimonial" class="list-group-item list-group-item-action">Feed back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

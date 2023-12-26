@@ -1,0 +1,10 @@
+.testimonial{
+    box-shadow: 0 3rem 6rem rgb(0 0 0 / 15%);
+    // transform: scale(.98);
+    transition: .2s all ease;
+}
+
+.testimonial:active,
+.testimonial:hover{
+    transform: scale(1.05);
+}

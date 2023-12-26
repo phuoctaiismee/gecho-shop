@@ -1,0 +1,108 @@
+.search-bar{
+    transition: .2s all ease;
+    input{
+        box-shadow: .3rem .3rem .5rem $london-fog;
+    }
+    button{
+        box-shadow: .3rem .3rem .5rem $london-fog;
+    }
+}
+.search-bar:hover{
+    transform: scale(1.05);
+}
+.packages {
+    padding-bottom: 6rem;
+    &-box {
+        width: 65rem;
+
+        &-icons {
+            position: relative;
+            width: 10rem !important;
+            height: 10rem !important;
+            padding: 1rem;
+            border: .9rem solid $white;
+            cursor: pointer;
+            box-shadow: .3rem .5rem 1rem $london-fog;
+            transition: .2s all ease;
+            .bi {
+                font-size: 2.5rem;
+                color: $deep-depths;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-icons:active,
+        &-icons:hover{
+            transform: scale(1.2);
+        }
+
+        &-icons--1 {
+            background-color: #f1deda;
+        }
+
+        &-icons--2 {
+            background-color: #a1e3c8;
+        }
+
+        &-icons--3 {
+            background-color: #c2e7f7;
+        }
+    }
+
+    &-text {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+.product-items{
+    &:hover .show-courser{
+        position: relative;
+        z-index: 100;
+        background-color: $white-cover; 
+        .show-courser-box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }     
+    }
+
+    .show-courser{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+}
+
+
+
+.panigate{
+    .pagination{
+        .page-item{
+            .page-link{
+                width: 5rem;
+                text-align: center;
+                color: $deep-depths;
+                font-size: 1.5rem;
+            }
+            .page-link:active,
+            // .page-link:hover,
+            .page-link:focus{
+                color: $white;
+                background-color: $viva-magenta;
+            }
+        }
+    }
+}

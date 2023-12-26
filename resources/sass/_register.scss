@@ -1,0 +1,15 @@
+.screen {
+    background-color: $white-alysum;
+}
+
+
+
+.form-register {
+    // height: 90.5vh;
+}
+
+@media (min-width: 1200px) {
+    .form-register {
+        padding: 7rem 12rem  !important;
+    }
+}
